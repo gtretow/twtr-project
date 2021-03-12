@@ -48,7 +48,11 @@ function Tweet() {
               <Dot />
               <time>10 de fev</time>
             </Header>
-            <Description>{element.body}</Description>
+            <Description>
+              {element.body.length > 140
+                ? (element.body = element.body.substring(0, 140))
+                : element.body}
+            </Description>
             <ImageContent />
             <Icons>
               <Status>
