@@ -24,14 +24,19 @@ export const Banner = styled.div`
 `;
 
 export const Avatar = styled.div`
-  width: max(45px, min(135px, 22vw));
-  height: max(45px, min(135px, 22vw));
+  width: 5rem;
+  height: 5rem;
   border: 3.75px solid var(--primary);
   background: var(--gray);
   border-radius: 50%;
   position: absolute;
   bottom: max(-60px, -10vw);
   left: 15px;
+
+  @media (min-width: 500px) {
+    width: 8rem;
+    height: 8rem;
+  }
 `;
 
 export const BioInfo = styled.div`

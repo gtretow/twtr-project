@@ -18,6 +18,17 @@ import {
 } from "./index";
 
 function Tweet() {
+  const [like, setLike] = useState(0);
+  const [retweet, setRetweet] = useState(0);
+
+  function handleLick() {
+    !like ? setLike(like + 1) : setLike(like - 1);
+  }
+
+  function handleRetweet() {
+    !retweet ? setRetweet(retweet + 1) : setRetweet(retweet - 1);
+  }
+
   const [users, setUser] = useState([]);
   const url = "https://jsonplaceholder.typicode.com/posts/1/comments";
   console.log(users);
@@ -60,12 +71,14 @@ function Tweet() {
                 20
               </Status>
               <Status>
-                <RetweetIcon />
-                2000
+                <RetweetIcon onClick={handleRetweet} />
+
+                {retweet}
               </Status>
               <Status>
-                <LikeIcon />
-                20000
+                <LikeIcon onClick={handleLick} />
+
+                {like}
               </Status>
             </Icons>
           </Content>

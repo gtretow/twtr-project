@@ -77,7 +77,7 @@ export const Description = styled.p`
 export const ImageContent = styled.div`
   margin-top: 12px;
   width: 100%;
-  height: 285px ;
+  height: 285px;
   background: var(--outline);
   border-radius: 14px;
   cursor: pointer;
