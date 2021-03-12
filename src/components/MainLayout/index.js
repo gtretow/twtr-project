@@ -25,6 +25,8 @@ export const Header = styled.div`
   }
   /* Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned. */
   position: sticky;
+  background: white;
+
   display: flex;
   align-items: center;
   text-align: left;
@@ -48,6 +50,7 @@ export const Bio = styled.div`
 `;
 
 export const RSideBar = styled.div`
+  background: white;
   position: fixed;
   bottom: 0;
   left: 0;

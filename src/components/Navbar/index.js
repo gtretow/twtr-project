@@ -112,7 +112,7 @@ export const Button = styled.button`
   cursor: pointer;
   outline: 0;
 
-  > strong {
+  > span {
     color: white;
   }
 
