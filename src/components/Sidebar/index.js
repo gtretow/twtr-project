@@ -13,5 +13,10 @@ export const Container = styled.div`
 
 export const SearchWrapper = styled.div``;
 export const SearchBar = styled.div``;
-export const SearchIcon = styled(Search)``;
 export const Body = styled.div``;
+
+export const SearchIcon = styled(Search)`
+  width: 27px;
+  height: 27px;
+  fill: var(--gray);
+`;
