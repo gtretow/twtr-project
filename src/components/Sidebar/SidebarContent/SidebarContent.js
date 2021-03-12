@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+import { Container, Item, Title } from "./index";
 
 function SidebarContent() {
-    return (
-        <div>
-            
-        </div>
-    )
+  const [users, setUser] = useState([]);
+  const url = "https://jsonplaceholder.typicode.com/posts/1/comments";
+  console.log(users);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get(url);
+
+        setUser([...response.data]);
+        console.log(response.data);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetchData();
+  }, []);
+
+  return (
+    <Container>
+      <Item>
+        <Title>Tendencias do Brasil</Title>
+      </Item>
+      {users.map((element, idx) => (
+        <Item key={idx}>{element.name}</Item>
+      ))}
+    </Container>
+  );
 }
 
-export default SidebarContent
+export default SidebarContent;
