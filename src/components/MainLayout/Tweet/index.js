@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-
+/* import { prop, switchProp } from "styled-tools"; */
 import { Chat, Replay, Favorite } from "../../../styles/icons";
 
 export const Container = styled.div`
@@ -100,7 +100,7 @@ export const Status = styled.div`
   > svg {
     margin-right: 5px;
   }
-
+  /* cores passadas por aqui para mudar a cor do SVG e do SPAN pelo menos lugar */
   &:nth-child(1) {
     &,
     > svg path {
@@ -109,6 +109,7 @@ export const Status = styled.div`
   }
   &:nth-child(2) {
     color: var(--retweet);
+
     > svg path {
       fill: var(--retweet);
     }

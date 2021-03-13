@@ -17,9 +17,10 @@ import {
   LikeIcon,
 } from "./index";
 
-function Tweet() {
+function Tweet(props) {
   const [like, setLike] = useState(0);
   const [retweet, setRetweet] = useState(0);
+
 
   function handleLick() {
     !like ? setLike(like + 1) : setLike(like - 1);
@@ -71,12 +72,12 @@ function Tweet() {
                 20
               </Status>
               <Status>
-                <RetweetIcon onClick={handleRetweet} />
+                <RetweetIcon onClick={handleRetweet}  />
 
                 {retweet}
               </Status>
               <Status>
-                <LikeIcon onClick={handleLick} />
+                <LikeIcon onClick={handleLick}/>
 
                 {like}
               </Status>
