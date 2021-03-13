@@ -17,17 +17,22 @@ import {
   LikeIcon,
 } from "./index";
 
-function Tweet(props) {
+function Tweet() {
   const [like, setLike] = useState(0);
   const [retweet, setRetweet] = useState(0);
-
+  const [color, setColor] = useState(false);
+  const [fill, setFill] = useState(false);
 
   function handleLick() {
-    !like ? setLike(like + 1) : setLike(like - 1);
+    !like
+      ? setLike(like + 1) && setColor(!color) && setFill(!fill)
+      : setLike(like - 1) && setColor(!color) && setFill(!fill);
   }
 
   function handleRetweet() {
-    !retweet ? setRetweet(retweet + 1) : setRetweet(retweet - 1);
+    !retweet
+      ? setRetweet(retweet + 1) && setColor(!color) && setFill(!fill)
+      : setRetweet(retweet - 1) && setColor(!color) && setFill(!fill);
   }
 
   const [users, setUser] = useState([]);
@@ -72,12 +77,18 @@ function Tweet(props) {
                 20
               </Status>
               <Status>
-                <RetweetIcon onClick={handleRetweet}  />
+                <RetweetIcon
+                  onClick={handleRetweet}
+                 
+                />
 
                 {retweet}
               </Status>
               <Status>
-                <LikeIcon onClick={handleLick}/>
+                <LikeIcon
+                  onClick={handleLick }
+                  
+                />
 
                 {like}
               </Status>

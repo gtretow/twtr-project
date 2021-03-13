@@ -1,5 +1,7 @@
 Twitter clone:
 
+Clone da pagina principal do Twitter
+Criado com: React e Styled Components
 
 Como utilizar:
 
@@ -9,7 +11,6 @@ git clone
 
 npm install
 
-npm start 
+npm start
 
-
-Live demo disponivel: 
+Live demo disponivel: https://twtr-clone-provi.herokuapp.com

@@ -108,10 +108,10 @@ export const Status = styled.div`
     }
   }
   &:nth-child(2) {
-    color: var(--retweet);
+    color: ${(props) => (props.color ? "black" : "var(--retweet)")};
 
     > svg path {
-      fill: var(--retweet);
+      fill: ${(props) => (props.fill ? "black" : "var(--retweet)")};
     }
   }
 
