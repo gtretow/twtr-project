@@ -1,17 +1,20 @@
-Twitter clone:
+# Twitter clone:
 
 Clone da pagina principal do Twitter
 Criado com: React e Styled Components
 
-Como utilizar:
+# Como utilizar:
 
-For no projeto
+Fork no projeto
 
-git clone
+- git clone
 
-npm install
+- npm install
 
-npm start
+- npm start
 
-Live demo disponivel: https://twtr-clone-provi.herokuapp.com
+# Live demo 
+disponivel: https://vigilant-bhabha-17d765.netlify.app/
+
+
 Figma Sketch: https://www.figma.com/file/pILqvftEcle8y5G4RaysjW/Untitled?node-id=2%3A0
