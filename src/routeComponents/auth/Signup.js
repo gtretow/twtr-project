@@ -14,6 +14,7 @@ function Signup(props) {
     password: null,
   });
 
+
   function handleChange(event) {
     setState({
       ...state,

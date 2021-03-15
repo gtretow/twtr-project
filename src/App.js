@@ -4,6 +4,7 @@ import { AuthContextComponent } from "./contexts/authContext";
 import { GlobalStyle } from "./styles/global";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AuthRouter from "./routeComponents/auth/AuthRouter";
+import LandingPage from "./components/LandingPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <AuthContextComponent>
           <Switch>
+            <Route exact path="/" component={LandingPage} />
             <Route exact path="/home" component={Home} />
             <Route path="/auth" component={AuthRouter} />
           </Switch>
