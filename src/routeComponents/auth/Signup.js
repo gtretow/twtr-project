@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Container, Form, Button, Input } from "./index";
-
-import api from "../../api/api";
-
+//informações comentadas, pois elas dependem do backend da aplicação para funcionar
+/* import api from "../../api/api";
+ */
 function Signup(props) {
   const history = useHistory();
   const [state, setState] = useState({ name: "", password: "", email: "" });

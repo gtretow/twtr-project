@@ -14,7 +14,7 @@ Fork no projeto
 - npm start
 
 # Live demo 
-disponivel: https://vigilant-bhabha-17d765.netlify.app/
+Disponivel: https://vigilant-bhabha-17d765.netlify.app/
 
 
 Figma Sketch: https://www.figma.com/file/pILqvftEcle8y5G4RaysjW/Untitled?node-id=2%3A0

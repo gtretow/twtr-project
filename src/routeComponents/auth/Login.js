@@ -1,19 +1,25 @@
-import React, { useState, useContext } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import api from "../../api/api";
-import { Container, Form, Button, Input } from "./index";
 
-import { AuthContext } from "../../contexts/authContext";
+//informações comentadas, pois elas dependem do backend da aplicação para funcionar
 
+/* import api from "../../api/api";
+ */ import { Container, Form, Button, Input } from "./index";
+
+/* import { AuthContext } from "../../contexts/authContext";
+ */
 function Login(props) {
-  const authContext = useContext(AuthContext);
-  const history = useHistory();
+  /*   const authContext = useContext(AuthContext);
+   */ const history = useHistory();
 
   const [state, setState] = useState({ password: "", email: "" });
   const [errors, setErrors] = useState({
     email: null,
     password: null,
   });
+
+  //apenas para parar o erro
 
   function handleChange(event) {
     setState({
