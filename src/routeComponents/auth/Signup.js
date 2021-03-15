@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import api from "../../api/api";
 
 function Signup(props) {
+  const history = useHistory();
   const [state, setState] = useState({ name: "", password: "", email: "" });
   const [errors, setErrors] = useState({
     name: null,
@@ -24,7 +25,8 @@ function Signup(props) {
       // eslint-disable-next-line no-unused-vars
       const response = await api.post("/signup", state);
       setErrors({ name: "", password: "", email: "" });
-      props.history.push("/auth/login");
+      //props.history.push("/auth/login");
+      history.push("/auth/login");
     } catch (err) {
       console.error(err.response);
       setErrors({ ...err.response.data.errors });
