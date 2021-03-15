@@ -37,7 +37,6 @@ function Tweet() {
 
   const [users, setUser] = useState([]);
   const url = "https://jsonplaceholder.typicode.com/posts/1/comments";
-  console.log(users);
 
   useEffect(() => {
     async function fetchData() {
@@ -45,7 +44,6 @@ function Tweet() {
         const response = await axios.get(url);
 
         setUser([...response.data]);
-        console.log(response.data);
       } catch (err) {
         console.error(err);
       }
@@ -57,7 +55,7 @@ function Tweet() {
     <Container>
       <Body>
         {users.map((element, idx) => (
-          <Content key={idx}>
+          <Content className="content" key={idx}>
             <Header>
               <Avatar />
               <strong>Provi</strong>
@@ -74,23 +72,17 @@ function Tweet() {
             <Icons>
               <Status>
                 <CommentIcon />
-                20
+                <span>0</span>
               </Status>
               <Status>
-                <RetweetIcon
-                  onClick={handleRetweet}
-                 
-                />
+                <RetweetIcon onClick={handleRetweet} />
 
                 {retweet}
               </Status>
               <Status>
-                <LikeIcon
-                  onClick={handleLick }
-                  
-                />
+                <LikeIcon onClick={handleLick} />
 
-                {like}
+                <span>{like}</span>
               </Status>
             </Icons>
           </Content>

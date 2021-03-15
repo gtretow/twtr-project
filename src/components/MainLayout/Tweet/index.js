@@ -106,6 +106,10 @@ export const Status = styled.div`
     > svg path {
       color: var(--gray);
     }
+
+    > span {
+      color: var(--gray);
+    }
   }
   &:nth-child(2) {
     color: ${(props) => (props.color ? "black" : "var(--retweet)")};
@@ -116,8 +120,11 @@ export const Status = styled.div`
   }
 
   &:nth-child(3) {
-    color: var(--like);
     > svg path {
+      color: var(--like);
+    }
+
+    > span {
       color: var(--like);
     }
   }

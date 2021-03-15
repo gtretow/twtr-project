@@ -6,7 +6,6 @@ import { Container, Item, Title } from "./index";
 function SidebarContent() {
   const [users, setUser] = useState([]);
   const url = "https://jsonplaceholder.typicode.com/posts/1/comments";
-  console.log(users);
 
   useEffect(() => {
     async function fetchData() {
@@ -14,7 +13,6 @@ function SidebarContent() {
         const response = await axios.get(url);
 
         setUser([...response.data]);
-        console.log(response.data);
       } catch (err) {
         console.error(err);
       }
