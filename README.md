@@ -14,7 +14,7 @@ Fork no projeto
 - npm start
 
 # Live demo 
-Disponivel: twitter-clone-provi.netlify.app
+Disponivel: https://twitter-clone-provi.netlify.app/
 
 
 Figma Sketch: https://www.figma.com/file/pILqvftEcle8y5G4RaysjW/Untitled?node-id=2%3A0
