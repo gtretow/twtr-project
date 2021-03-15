@@ -1,11 +1,13 @@
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
-import api from "../../apis/api";
+import { Link, useHistory } from "react-router-dom";
+import api from "../../api/api";
+import { Container, Form, Button, Input } from "./index";
 
 import { AuthContext } from "../../contexts/authContext";
 
 function Login(props) {
   const authContext = useContext(AuthContext);
+  const history = useHistory();
 
   const [state, setState] = useState({ password: "", email: "" });
   const [errors, setErrors] = useState({
@@ -22,10 +24,10 @@ function Login(props) {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    history.push("/home");
 
-    try {
+    /* try {
       const response = await api.post("/login", state);
-      console.log(response);
 
       authContext.setLoggedInUser({ ...response.data });
       localStorage.setItem(
@@ -33,20 +35,20 @@ function Login(props) {
         JSON.stringify({ ...response.data })
       );
       setErrors({ password: "", email: "" });
-      props.history.push("/book/all");
+      history.push("/home");
     } catch (err) {
       console.error(err.response);
       setErrors({ ...err.response.data.errors });
-    }
+    } */
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <h1>Login</h1>
 
-      <div>
-        <label htmlFor="signupFormEmail">E-mail Address</label>
-        <input
+      <Container>
+        <label htmlFor="signupFormEmail">E-mail </label>
+        <Input
           type="email"
           name="email"
           id="signupFormEmail"
@@ -54,11 +56,11 @@ function Login(props) {
           error={errors.email}
           onChange={handleChange}
         />
-      </div>
+      </Container>
 
-      <div>
-        <label htmlFor="signupFormPassword">Password</label>
-        <input
+      <Container>
+        <label htmlFor="signupFormPassword">Senha</label>
+        <Input
           type="password"
           name="password"
           id="signupFormPassword"
@@ -66,16 +68,14 @@ function Login(props) {
           error={errors.password}
           onChange={handleChange}
         />
-      </div>
+      </Container>
 
-      <div>
-        <button type="submit">Login!</button>
+      <Container>
+        <Button type="submit">Login!</Button>
 
-        <Link to="/auth/signup">
-          Don't have an account? Click here to signup!
-        </Link>
-      </div>
-    </form>
+        <Link to="/auth/signup">Não tem uma conta? Faça o registro!</Link>
+      </Container>
+    </Form>
   );
 }
 

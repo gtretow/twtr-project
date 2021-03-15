@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Home() {
+function LoginHome() {
   return (
     <div>
       <h1>Provi Challenge</h1>
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default LoginHome;

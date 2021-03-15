@@ -13,6 +13,8 @@ export const Container = styled.div`
 `;
 
 export const Item = styled.div`
+  align-items: center;
+  justify-content: center;
   padding: 10px 16px;
 
   &:first-child {
@@ -28,7 +30,7 @@ export const Item = styled.div`
 `;
 
 export const Avatar = styled.div`
-  display: flex;
+
 
   width: 49px;
   height: 49px;
@@ -39,12 +41,12 @@ export const Avatar = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
+
   display: flex;
   align-items: center;
 `;
 
 export const FollowButton = styled.button`
-  align-items: center;
 
   margin-left: 250px;
   background: transparent;

@@ -43,8 +43,6 @@ function WhoToFollow() {
               <Avatar />
 
               <strong>{element.name.slice(0, 7)}</strong>
-
-              <span>@usuario</span>
             </ButtonContainer>
             <FollowButton>Seguir</FollowButton>
           </Item>
